@@ -4,7 +4,7 @@ import useHttpContext, {
   HttpRequestType,
 } from "../constans/hooks/useHttpContext";
 import { CryptoInfo } from "../constans/stored-interface";
-import { useStartFunctionAfterTime } from "../hooks/useStartFunctionAfterTime";
+import { useStartFunctionAfterTime } from "../constans/hooks/useStartFunctionAfterTime";
 
 const HomePage = () => {
   const [data, setData] = useState<CryptoInfo[]>([]);
