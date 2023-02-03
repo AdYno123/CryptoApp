@@ -1,11 +1,11 @@
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MainLayout from "./component/global/MainLayout";
-import HomePage from "./Page/HomePage";
 
 function App() {
+  const HomePage = lazy(() => import("./Page/HomePage"));
   return (
     <div className="App">
       <ToastContainer
@@ -24,7 +24,6 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
-            {/* <Route path="/players" element={<PlayersTable />} /> */}
           </Route>
         </Routes>
       </Suspense>
